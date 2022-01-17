@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "homework_scores",
+  "info": {
+    "singularName": "homework-score",
+    "pluralName": "homework-scores",
+    "displayName": "HomeworkScores",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "quarter": {
+      "type": "string"
+    },
+    "score": {
+      "type": "integer"
+    },
+    "student": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::student.student",
+      "inversedBy": "homework_scores"
+    }
+  }
+}

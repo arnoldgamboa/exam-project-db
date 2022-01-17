@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "test_scores",
+  "info": {
+    "singularName": "test-score",
+    "pluralName": "test-scores",
+    "displayName": "TestScores",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "quarter": {
+      "type": "string"
+    },
+    "score": {
+      "type": "integer"
+    },
+    "student": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::student.student",
+      "inversedBy": "test_scores"
+    }
+  }
+}

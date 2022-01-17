@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "students",
+  "info": {
+    "singularName": "student",
+    "pluralName": "students",
+    "displayName": "Students"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "homework_scores": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::homework-score.homework-score",
+      "mappedBy": "student"
+    },
+    "test_scores": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::test-score.test-score",
+      "mappedBy": "student"
+    }
+  }
+}
